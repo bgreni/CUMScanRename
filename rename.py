@@ -62,6 +62,8 @@ class Sorter:
         if not isdir(gradeFolder):
             mkdir(gradeFolder)
 
+        name = ', '.join(name.split(' ', 1)[::-1])
+
         if name in self.seenNames:
             self.seenNames.append(name)
             n = len([x for x in self.seenNames if x == name])
